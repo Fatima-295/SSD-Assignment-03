@@ -1,0 +1,132 @@
+2025-10-25T01:19:22.298+05:00  INFO 12872 --- [main] .n.o.AdditionalSecurityExpectationsTests : Starting AdditionalSecurityExpectationsTests using Java 21.0.8 with PID 12872 (started by FATIMA FAROOQ in C:\Users\FATIMA FAROOQ\OneDrive\Desktop\assignments\ssd\ass3\assignment-code\FATIMA\FATIMA\owasp-api-vuln-lab-assignment-03\Fixed Code)
+2025-10-25T01:19:22.313+05:00  INFO 12872 --- [main] .n.o.AdditionalSecurityExpectationsTests : No active profile set, falling back to 1 default profile: "default"
+2025-10-25T01:19:24.399+05:00  INFO 12872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-25T01:19:24.510+05:00  INFO 12872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 2 JPA repository interfaces.
+2025-10-25T01:19:25.352+05:00  INFO 12872 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-25T01:19:25.469+05:00  INFO 12872 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-10-25T01:19:25.519+05:00  INFO 12872 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-25T01:19:26.010+05:00  INFO 12872 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-25T01:19:26.052+05:00  INFO 12872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-25T01:19:26.252+05:00  INFO 12872 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:apilab user=SA
+2025-10-25T01:19:26.252+05:00  INFO 12872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-25T01:19:27.368+05:00  INFO 12872 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-25T01:19:27.436+05:00  INFO 12872 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T01:19:27.902+05:00  INFO 12872 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-25T01:19:28.535+05:00  WARN 12872 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-25T01:19:28.585+05:00  WARN 12872 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: af59e9dd-d83d-403b-8475-bacfca4985fa
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-25T01:19:28.594+05:00  INFO 12872 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-25T01:19:29.380+05:00  INFO 12872 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:apilab'
+2025-10-25T01:19:29.498+05:00  INFO 12872 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-25T01:19:29.498+05:00  INFO 12872 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-25T01:19:29.500+05:00  INFO 12872 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-10-25T01:19:29.522+05:00  INFO 12872 --- [main] .n.o.AdditionalSecurityExpectationsTests : Started AdditionalSecurityExpectationsTests in 7.58 seconds (process running for 8.877)
+2025-10-25T01:19:31.229+05:00  INFO 12872 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [edu.nu.owaspapivulnlab.SecurityVerificationTests]: SecurityVerificationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-25T01:19:31.229+05:00  INFO 12872 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.nu.owaspapivulnlab.OwaspApiVulnLabApplication for test class edu.nu.owaspapivulnlab.SecurityVerificationTests
+2025-10-25T01:19:31.311+05:00  INFO 12872 --- [main] e.n.o.SecurityVerificationTests          : Starting SecurityVerificationTests using Java 21.0.8 with PID 12872 (started by FATIMA FAROOQ in C:\Users\FATIMA FAROOQ\OneDrive\Desktop\assignments\ssd\ass3\assignment-code\FATIMA\FATIMA\owasp-api-vuln-lab-assignment-03\Fixed Code)
+2025-10-25T01:19:31.313+05:00  INFO 12872 --- [main] e.n.o.SecurityVerificationTests          : The following 1 profile is active: "test"
+2025-10-25T01:19:31.535+05:00  INFO 12872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-25T01:19:31.556+05:00  INFO 12872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2025-10-25T01:19:31.835+05:00  INFO 12872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-10-25T01:19:31.856+05:00  INFO 12872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-25T01:19:31.856+05:00  INFO 12872 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-10-25T01:19:31.952+05:00  INFO 12872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-25T01:19:31.952+05:00  INFO 12872 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 637 ms
+2025-10-25T01:19:31.952+05:00  INFO 12872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-25T01:19:31.952+05:00  INFO 12872 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:apilab user=SA
+2025-10-25T01:19:31.952+05:00  INFO 12872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-25T01:19:31.952+05:00  INFO 12872 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:apilab'
+2025-10-25T01:19:32.042+05:00  INFO 12872 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-25T01:19:32.047+05:00  INFO 12872 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-25T01:19:32.056+05:00  INFO 12872 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-25T01:19:32.130+05:00  INFO 12872 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-25T01:19:32.130+05:00  INFO 12872 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T01:19:32.213+05:00  WARN 12872 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-25T01:19:32.232+05:00  WARN 12872 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9b5452a7-151c-4711-8089-b637cd9dd767
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-25T01:19:32.241+05:00  INFO 12872 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-25T01:19:32.532+05:00  INFO 12872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 58784 (http) with context path '/'
+2025-10-25T01:19:32.535+05:00  INFO 12872 --- [main] e.n.o.SecurityVerificationTests          : Started SecurityVerificationTests in 1.299 seconds (process running for 11.889)
+2025-10-25T01:19:32.631+05:00  INFO 12872 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-25T01:19:32.632+05:00  INFO 12872 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-25T01:19:32.632+05:00  INFO 12872 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-25T01:19:33.185+05:00  INFO 12872 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T01:19:33.185+05:00  INFO 12872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-25T01:19:33.185+05:00  INFO 12872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-25T01:19:33.185+05:00  INFO 12872 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T01:19:33.185+05:00  INFO 12872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-25T01:19:33.200+05:00  INFO 12872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-10-25T01:24:32.227+05:00  INFO 20396 --- [main] .n.o.AdditionalSecurityExpectationsTests : Starting AdditionalSecurityExpectationsTests using Java 21.0.8 with PID 20396 (started by FATIMA FAROOQ in C:\Users\FATIMA FAROOQ\OneDrive\Desktop\assignments\ssd\ass3\assignment-code\FATIMA\FATIMA\owasp-api-vuln-lab-assignment-03\Fixed Code)
+2025-10-25T01:24:32.227+05:00  INFO 20396 --- [main] .n.o.AdditionalSecurityExpectationsTests : No active profile set, falling back to 1 default profile: "default"
+2025-10-25T01:24:33.425+05:00  INFO 20396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-25T01:24:33.515+05:00  INFO 20396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
+2025-10-25T01:24:34.403+05:00  INFO 20396 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-25T01:24:34.523+05:00  INFO 20396 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-10-25T01:24:34.587+05:00  INFO 20396 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-25T01:24:35.106+05:00  INFO 20396 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-25T01:24:35.139+05:00  INFO 20396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-25T01:24:35.356+05:00  INFO 20396 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:apilab user=SA
+2025-10-25T01:24:35.356+05:00  INFO 20396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-25T01:24:36.389+05:00  INFO 20396 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-25T01:24:36.467+05:00  INFO 20396 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T01:24:36.922+05:00  INFO 20396 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-25T01:24:37.484+05:00  WARN 20396 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-25T01:24:37.545+05:00  WARN 20396 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 82207422-09a7-49f8-9a6b-aa5f1e75925b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-25T01:24:37.557+05:00  INFO 20396 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-25T01:24:38.322+05:00  INFO 20396 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:apilab'
+2025-10-25T01:24:38.442+05:00  INFO 20396 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-25T01:24:38.444+05:00  INFO 20396 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-25T01:24:38.444+05:00  INFO 20396 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-10-25T01:24:38.473+05:00  INFO 20396 --- [main] .n.o.AdditionalSecurityExpectationsTests : Started AdditionalSecurityExpectationsTests in 6.66 seconds (process running for 8.155)
+2025-10-25T01:24:40.106+05:00  INFO 20396 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [edu.nu.owaspapivulnlab.SecurityVerificationTests]: SecurityVerificationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-25T01:24:40.106+05:00  INFO 20396 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration edu.nu.owaspapivulnlab.OwaspApiVulnLabApplication for test class edu.nu.owaspapivulnlab.SecurityVerificationTests
+2025-10-25T01:24:40.171+05:00  INFO 20396 --- [main] e.n.o.SecurityVerificationTests          : Starting SecurityVerificationTests using Java 21.0.8 with PID 20396 (started by FATIMA FAROOQ in C:\Users\FATIMA FAROOQ\OneDrive\Desktop\assignments\ssd\ass3\assignment-code\FATIMA\FATIMA\owasp-api-vuln-lab-assignment-03\Fixed Code)
+2025-10-25T01:24:40.173+05:00  INFO 20396 --- [main] e.n.o.SecurityVerificationTests          : The following 1 profile is active: "test"
+2025-10-25T01:24:40.403+05:00  INFO 20396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-25T01:24:40.422+05:00  INFO 20396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2025-10-25T01:24:40.756+05:00  INFO 20396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-10-25T01:24:40.783+05:00  INFO 20396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-25T01:24:40.783+05:00  INFO 20396 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-10-25T01:24:40.855+05:00  INFO 20396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-25T01:24:40.855+05:00  INFO 20396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 681 ms
+2025-10-25T01:24:40.880+05:00  INFO 20396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-25T01:24:40.880+05:00  INFO 20396 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:apilab user=SA
+2025-10-25T01:24:40.880+05:00  INFO 20396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-25T01:24:40.880+05:00  INFO 20396 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:apilab'
+2025-10-25T01:24:40.973+05:00  INFO 20396 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-25T01:24:40.973+05:00  INFO 20396 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-25T01:24:40.973+05:00  INFO 20396 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-25T01:24:41.059+05:00  INFO 20396 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-25T01:24:41.062+05:00  INFO 20396 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T01:24:41.106+05:00  WARN 20396 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-25T01:24:41.113+05:00  WARN 20396 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 954f8d01-73c9-44b2-9f27-3e4a73efba40
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-25T01:24:41.113+05:00  INFO 20396 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-25T01:24:41.323+05:00  INFO 20396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 59111 (http) with context path '/'
+2025-10-25T01:24:41.327+05:00  INFO 20396 --- [main] e.n.o.SecurityVerificationTests          : Started SecurityVerificationTests in 1.221 seconds (process running for 11.01)
+2025-10-25T01:24:41.465+05:00  INFO 20396 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-25T01:24:41.465+05:00  INFO 20396 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-25T01:24:41.466+05:00  INFO 20396 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-25T01:24:42.123+05:00  INFO 20396 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T01:24:42.123+05:00  INFO 20396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-25T01:24:42.123+05:00  INFO 20396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-25T01:24:42.123+05:00  INFO 20396 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T01:24:42.137+05:00  INFO 20396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-25T01:24:42.139+05:00  INFO 20396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
