@@ -1,54 +1,42 @@
 pipeline {
     agent any
 
+    environment {
+        SONAR_SERVER = 'SonarQubeServer'
+    }
+
     stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/<your-username>/<your-repo>.git'
+            }
+        }
 
         stage('Build') {
             steps {
-                echo '📦 Installing dependencies...'
-
-                // Create virtual environment
-                bat 'python -m venv venv'
-
-                // Activate venv + install requirements
-                bat '''
-                    call venv\\Scripts\\activate
-                    python -m pip install --upgrade pip
-                    pip install -r requirements.txt
-                '''
+                sh 'mvn clean install -DskipTests'
             }
         }
 
-        stage('Test') {
+        stage('SonarQube Analysis') {
             steps {
-                echo '🧪 Running tests...'
-
-                bat '''
-                    call venv\\Scripts\\activate
-                    pytest --maxfail=1 --disable-warnings --quiet
-                    if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
-                '''
+                withSonarQubeEnv("${SONAR_SERVER}") {
+                    sh '''
+                        mvn sonar:sonar \
+                        -Dsonar.projectKey=my-app \
+                        -Dsonar.projectName=my-app \
+                        -Dsonar.host.url=http://localhost:9000
+                    '''
+                }
             }
         }
 
-        stage('Deploy') {
+        stage('Quality Gate') {
             steps {
-                echo '🚀 Deploying Flask App...'
-
-                bat '''
-                    call venv\\Scripts\\activate
-                    start /B python app.py
-                '''
+                timeout(time: 5, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
+                }
             }
-        }
-    }
-
-    post {
-        success {
-            echo '🎉 Pipeline Completed Successfully!'
-        }
-        failure {
-            echo '❌ Pipeline Failed!'
         }
     }
 }
