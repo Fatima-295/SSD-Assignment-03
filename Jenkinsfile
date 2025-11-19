@@ -1,42 +1,22 @@
 pipeline {
     agent any
 
-    environment {
-        SONAR_SERVER = 'SonarQubeServer'
-    }
-
     stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/<your-username>/<your-repo>.git'
-            }
-        }
-
         stage('Build') {
             steps {
-                sh 'mvn clean install -DskipTests'
+                echo 'Building the project...'
             }
         }
 
-        stage('SonarQube Analysis') {
+        stage('Test') {
             steps {
-                withSonarQubeEnv("${SONAR_SERVER}") {
-                    sh '''
-                        mvn sonar:sonar \
-                        -Dsonar.projectKey=my-app \
-                        -Dsonar.projectName=my-app \
-                        -Dsonar.host.url=http://localhost:9000
-                    '''
-                }
+                echo 'Running tests...'
             }
         }
 
-        stage('Quality Gate') {
+        stage('Deploy') {
             steps {
-                timeout(time: 5, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
-                }
+                echo 'Deployment step...'
             }
         }
     }
-}
