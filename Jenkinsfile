@@ -6,14 +6,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo '📦 Installing dependencies...'
-                
+
                 // Create virtual environment
-                sh 'python -m venv venv'
-                
+                bat 'python -m venv venv'
+
                 // Activate venv + install requirements
-                sh '''
-                    source venv/Scripts/activate
-                    pip install --upgrade pip
+                bat '''
+                    call venv\\Scripts\\activate
+                    python -m pip install --upgrade pip
                     pip install -r requirements.txt
                 '''
             }
@@ -22,16 +22,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo '🧪 Running tests...'
-                
-                // If you have pytest or unittests
-                sh '''
-                    source venv/Scripts/activate
-                    if pytest --maxfail=1 --disable-warnings --quiet; then
-                        echo "Tests passed"
-                    else
-                        echo "Tests failed"
-                        exit 1
-                    fi
+
+                bat '''
+                    call venv\\Scripts\\activate
+                    pytest --maxfail=1 --disable-warnings --quiet
+                    if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
                 '''
             }
         }
@@ -39,11 +34,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo '🚀 Deploying Flask App...'
-                
-                // Run Flask app (or copy files to server)
-                sh '''
-                    source venv/Scripts/activate
-                    python app.py &
+
+                bat '''
+                    call venv\\Scripts\\activate
+                    start /B python app.py
                 '''
             }
         }
