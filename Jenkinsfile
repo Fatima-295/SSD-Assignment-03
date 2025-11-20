@@ -31,7 +31,7 @@ pipeline {
                     withSonarQubeEnv('SonarServer') {
 
                         bat """
-                        "D:\sonar-scanner-cli-7.3.0.5189-windows-x64\sonar-scanner-7.3.0.5189-windows-x64\bin" ^
+                        "D:\\ssd\\sonar-scanner-cli-7.3.0.5189-windows-x64\\sonar-scanner-7.3.0.5189-windows-x64\\bin\\sonar-scanner.bat" ^
                         -Dsonar.projectKey=myproject ^
                         -Dsonar.sources=. ^
                         -Dsonar.host.url=%SONAR_HOST_URL% ^
