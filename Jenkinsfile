@@ -16,15 +16,28 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out code from Git repository'
-                checkout scm   // Make sure your Jenkins job is connected to your repo
+                checkout scm
             }
         }
 
         stage('SonarQube Analysis') {
             steps {
                 echo 'Running SonarQube scan...'
-                withSonarQubeEnv('SonarServer') { // Replace with your configured SonarQube server name
-                    bat '"D:\\ssd\\sonar-scanner-cli-7.3.0.5189-windows-x64\\sonar-scanner-7.3.0.5189-windows-x64\\bin\\sonar-scanner.bat" -Dsonar.projectKey=myproject -Dsonar.sources=. -Dsonar.host.url=%SONAR_HOST_URL% -Dsonar.login=%SONAR_AUTH_TOKEN%'
+
+                // Load token stored in Jenkins Credentials
+                withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+
+                    // Load SonarQube server env (host URL, etc.)
+                    withSonarQubeEnv('SonarServer') {
+
+                        bat """
+                        "D:\\ssd\\sonar-scanner-cli-7.3.0.5189-windows-x64\\sonar-scanner-7.3.0.5189-windows-x64\\bin\\sonar-scanner.bat" ^
+                        -Dsonar.projectKey=myproject ^
+                        -Dsonar.sources=. ^
+                        -Dsonar.host.url=%SONAR_HOST_URL% ^
+                        -Dsonar.login=%SONAR_TOKEN%
+                        """
+                    }
                 }
             }
         }
@@ -43,7 +56,6 @@ pipeline {
                 echo "Selected VERSION: ${params.VERSION}"
                 echo "Selected VERSION_CHOICE: ${params.VERSION_CHOICE}"
                 echo "Env NEW_VERSION: ${NEW_VERSION}"
-                // Add your real build command here, e.g. bat 'mvn clean package'
             }
         }
 
@@ -55,7 +67,6 @@ pipeline {
             }
             steps {
                 echo 'Testing Project'
-                // Add your real test command here, e.g. bat 'mvn test'
             }
         }
     }
